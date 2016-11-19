@@ -18,13 +18,14 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
-// var routes = require('./controllers/pets_controller.js');
+var routes = require('./controllers/usercontroller.js');
 
-// app.use('/', routes);
-// app.use('/find', routes);
-// app.use('/create', routes);
+app.use('/public/landing.html')
+app.use('/', routes);
+app.use('/find', routes);
+app.use('/create', routes);
 
 var PORT = process.env.PORT || 3000;
 app.listen(PORT);
 
-console.log("running on " + PORT);
+console.log("app is running on port " + PORT);
