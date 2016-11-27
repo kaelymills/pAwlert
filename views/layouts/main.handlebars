@@ -1,36 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>pAwlert</title>
 		<meta charset="UTF-8">
-		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+		
+		<link rel="stylesheet" href="/assets/css/style.css" type="text/css"/>	
+
+
+        <!--SEO Features-->
+        <title>pAwlert </title>
+        <meta property="og:description" content="">
+        <meta name="description" content="">
+
 	</head>
-	<body>
-
-    {{#if logged_in}}
-        <div class="container">
-            <div class="row text-center" id ="holder">
-                {{#each pets}}
-                    <div class="col-sm-6 col-md-4">
-                        <div class ="thumbnail">
-                            <img src="{{link}}" id="thumbimg">
-                            <div class = "caption">
-                                <h2>{{name}}</h2>
-                                <h3>{{date}}</h3>
-                                <p>{{breed}}</p>
-                                <p><a href="/readmore/{{name}}"><button class="btn btn-primary">Read More</button></a></p>
-                            </div>
-                        </div>
-                    </div>
-                {{/each}}
-            </div>
-        </div>
-    {{/if}}
-
+	<body class="text-center">
+	<header id="headerLogin" >	
+			{{#unless logged_in}}
+				<a href="/users/sign-in">Sign In</a>
+				|
+				<a href="/users/new">Sign Up</a>				
+			{{/unless}}
+			{{#if logged_in}}
+			    <div class="navbar navbar-inverse navbar-static-top">
+			      <div class="container"> 
+			        <div class="navbar-header">
+			          <a class="navbar-brand" href="/profile">Welcome {{username}}</a>
+			        </div>
+			        <div class="navbar-collapse collapse">
+			        
+			        <header class ="header hpadding">
+                        <h1>pAwlert</h1>
+                        <p>Awlerts To Bring Your Lost Paws Home!</p>
+      				</header>
+			          <ul class="nav navbar-nav navbar-right">
+			            <li><a href="/" id="menu">Home</a></li>
+			            <li><a href="/" id="menu">Post</a></li>
+			            <li><a href="/users/sign-out" id="menu">Sign Out</a></li>
+			          </ul>
+			        </div>
+			      </div>
+			    </div>
+			{{/if}}
+	</header>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		{{#unless logged_in}}
+		<header class ="header hpadding">
+                        <h1>pAwlert</h1>
+                        <p>Awlerts To Bring Your Lost Paws Home!</p>
+      				</header>
+		{{/unless}}
 		{{{ body }}}
 	</body>
 </HTML>

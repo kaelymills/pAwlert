@@ -1,0 +1,51 @@
+    <div id="ww">
+      <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-lg LEFT">
+
+          <h1 class="line-1 anim-typewriter">{{crime.name}}</h1>
+          <p id = "article">{{crime.article}}</p>
+        </div>
+        <div class="col-lg-6 col-lg RIGHT">
+        <h2>Additional Links</h2>
+        <p>Local Law Enforcement: {{crime.phone}}</p>
+        <p>Link: <a href="{{crime.cslink}}" class ="cslink">CrimeStoppers</a> </p> 
+        <p>Take on this Case!</p> 
+        {{#unless favorite}}
+        <form class="create-update-form" action="/favorite" method="POST">
+          <input type="hidden" name="favorite" value="{{crime.name}}" >
+          <input type="hidden" name="favoriteid" value="{{crime.id}}" >
+          <button type="submit">Favorite</button>
+        </form>
+        {{/unless}}
+        <div id="Watch">
+              <br>
+              <p class="watch_headline">Solved Case Spotlight</p>
+              <p class="watch_summary">COLD CASE MURDER FINALLY SOLVED AFTER 54 YEARS</p>
+              <iframe class="videos" width="350" height="200" src="https://www.youtube.com/embed/uvLHVF7PVC8" allowfullscreen></iframe>   
+            </div> 
+        {{#if favorite}}  
+        <h2>Notes</h2>
+        <ul>
+          {{#each note}}
+              <li>
+                {{this.name}} - {{this.User.username}}
+              </li>
+          {{/each}}
+        </ul>      
+          <form class="create-update-form" action="/addnote" method="POST">
+          <div class="form-group comments">
+            <input type="hidden" name="cid" value="{{crime.id}}" >           
+            <label for="note">Add a note:</label>
+            <input type="text" id="note" name="name">           
+            <button type="submit">Comment</button>
+          </div>
+        </form>   
+        {{/if}}    
+        </div>
+        </div>  
+      </div>
+      <div id="footer">
+      </div>
+  </div>
+  </div>

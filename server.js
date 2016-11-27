@@ -1,5 +1,9 @@
+// Dependencies
+// ============
 var express = require('express');
 var path = require('path');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
 var cookieParser = require('cookie-parser'); // for working with cookies
 var bodyParser = require('body-parser');
 var session = require('express-session'); 
@@ -7,11 +11,18 @@ var methodOverride = require('method-override'); // for deletes in express
 
 
 // Our model controllers (rather than routes)
-var users_controller = require('./controllers/usercontroller');
+var application_controller = require('./controllers/application_controller');
 
-// var User = require("./models")["user"];
-// User.sync();
+var users_controller = require('./controllers/users_controller');
 
+var Fave = require("./models")["Fave"];
+Fave.sync();
+
+var User = require("./models")["User"];
+User.sync();
+
+var Note = require("./models")["Note"];
+Note.sync();
 // Express settings
 // ================
 
@@ -35,12 +46,14 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
-// app.use(logger('dev'));
+app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/', application_controller);
 app.use('/users', users_controller);
 
 // catch 404 and forward to error handler
@@ -52,8 +65,6 @@ app.use(function(req, res, next) {
 
 
 var PORT = process.env.PORT || 3000;
-console.log("Listening" + PORT);
+console.log("listening" + PORT);
 
 app.listen(PORT);
-
-
