@@ -14,13 +14,28 @@
 
 	</head>
 	<body class="text-center">
-	<header id="headerLogin" >	
+
+
 			{{#unless logged_in}}
+		<header class ="header hpadding">
+                        <h1>pAwlert</h1>
+                        <p>Awlerts To Bring Your Lost Paws Home!</p>
+      				</header>
+		{{/unless}}
+
+
+	
+			{{#unless logged_in}}
+			<header id="headerLogin" >	
+		<div class="signLogin">
 				<a href="/users/sign-in">Sign In</a>
-				|
-				<a href="/users/new">Sign Up</a>				
+				&#183;
+				<a href="/users/new">Sign Up</a>
+				</div>
+		</header>							
 			{{/unless}}
 			{{#if logged_in}}
+			<header id="headerLogin">
 			    <div class="navbar navbar-static-top">
 			      <div class="container"> 
 			        <div class="navbar-header">
@@ -43,12 +58,7 @@
 			{{/if}}
 	</header>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-		{{#unless logged_in}}
-		<header class ="header hpadding">
-                        <h1>pAwlert</h1>
-                        <p>Awlerts To Bring Your Lost Paws Home!</p>
-      				</header>
-		{{/unless}}
+
 		{{{ body }}}
 	</body>
 </HTML>
