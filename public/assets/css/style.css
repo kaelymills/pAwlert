@@ -161,7 +161,7 @@ p {
 
 /* Links */
 a {
-    color: #BLACK;
+    
     word-wrap: break-word;
 
     -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -173,7 +173,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #7b7b7b;
+    color: rgba(46, 151, 89, 1);
     text-decoration: none;
     outline: 0;
 }
