@@ -58,6 +58,7 @@ router.post('/login', function(req, res) {
       // if the result is anything but true (password invalid)
       else{
       	// redirect user to sign in
+      		alert("Incorrect Login");
 				res.redirect('/users/sign-in')
 			}
     })

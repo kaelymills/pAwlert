@@ -124,8 +124,12 @@ img {
 
 #thumbimg {
     height: 170px; 
-    width: 150px; 
+    width: auto;
     display: block;
+}
+
+#thumbnail {
+    background-color:rgba(192,192,192,0.7);
 }
 
 #login {
@@ -203,23 +207,7 @@ a:after {
     font-family: 'PT Sans', sans-serif;
 }
 
-/*.navbar-inverse {*/
-    /*padding-bottom: 10px;*/
-    /*padding-top: 10px;*/
-/*}*/
 
-/*.navbar-inverse {*/
-    /*background-color: rgba(0,0,0,0.7);*/
-    /*border-color: #000;*/
-/*}*/
-
-/*.navbar-inverse .navbar-nav > li > a {*/
-    /*color: white;*/
-/*}*/
-
-/*.navbar-inverse .navbar-nav > li > a:hover {*/
-    /*color: #222222;*/
-/*}*/
 
 .navbar-brand {
     font-weight: 700;

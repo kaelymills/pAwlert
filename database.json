@@ -1,15 +1,28 @@
 {
     "data": [
         {
-            "name": "Maura Murray",
-            "link": "https://upload.wikimedia.org/wikipedia/en/thumb/7/79/MauraMurrayin2003.jpg/220px-MauraMurrayin2003.jpg",
-            "date": "02/09/2004",
-            "case": "On the surface, Maura Murray appeared to be the quintessential All-American Girl: track star, former West Point cadet, nursing student, and cute as a button. Then a series of strange events began one night while Maura was working the security desk at Melville Hall, on the campus of UMass, Amherst.",
-            "article": "On the surface, Maura Murray appeared to be the quintessential All-American Girl: track star, former West Point cadet, nursing student, and cute as a button. Then a series of strange events began one night while Maura was working the security desk at Melville Hall, on the campus of UMass, Amherst. This was Thursday, February 5, 2004. A shift manager found Maura at her desk in a catatonic state. All she would say was, “my sister.” The manager escorted her back to her room. The next day, school was canceled due to snow. That Saturday, Maura’s father, Fred, came to visit, with $4,000 in cash, to find her a new car, he says, though they never purchased one. On Saturday night Maura wrecked Fred’s car on the way back to his motel room around 3:30 a.m. On Monday morning, Maura sent an email to professors, stating that she would not be in class that week due to a death in the family – this was a lie. Nobody had died.  That afternoon, Maura got into her car, stopped by an ATM to empty out her bank account, and then drove north into the White Mountains of New Hampshire, where she got into another accident, this time smashing into a snow bank. A bus driver who lived nearby stopped to ask if she needed help. She declined. The time between the accident and the moment the first officer arrived on scene was between five and seven minutes. Sometime in that window, Maura vanished.  Possible Solutions: I began investigating Maura’s disappearance in 2010 and what I found was quite shocking. Maura was not the angelic young woman presented in early media reports. At the time of her disappearance she was in trouble for credit card fraud and identity theft. She left West Point in the middle of a judicial inquiry that was launched when she stole makeup from the commissary at Fort Knox. And she had been having an affair with her track coach and sometimes told him that she wanted to run away and start a new life.  Where was Maura going when she crashed her car in New Hampshire? What happened to her afterwards? Was she heading into the White Mountains to commit suicide, to go off and die “like an old squaw,” as her father suggested to police. Was she picked up by a serial killer? Or did she use an underground railroad for abused women to aide her escape into Canada?",
+            "name": "Lila",
+            "link": "http://ghk.h-cdn.co/assets/16/09/980x490/landscape-1457107485-gettyimages-512366437.jpg",
+            "date": "02/09/2016",
+            "case": "Yellow lab puppy found off of route 41.",
+            "article": "",
             "lat": "44.1644",
             "long": "71.4326",
             "phone": "(603) 223-8813",
-            "cslink": "http://www.cityofportsmouth.com/police/crimestoppers.htm",
+            "cslink": "",
+            "id": 1
+        },
+
+        {
+            "name": "Cooper",
+            "link": "https://s-media-cache-ak0.pinimg.com/736x/45/a4/e1/45a4e1a9dcddbd936c5586419842e397.jpg",
+            "date": "02/09/2016",
+            "case": "Black lab puppy found off of route 41.",
+            "article": "",
+            "lat": "44.1644",
+            "long": "71.4326",
+            "phone": "(603) 223-8813",
+            "cslink": "",
             "id": 1
         }
 
