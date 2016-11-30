@@ -243,7 +243,9 @@ a:after {
 #ww {
     padding-top: 70px;
     padding-bottom: 70px;
-    background-color: #ffffff;
+    background-color:rgba(192,192,192,0.8);
+    margin-left: 50px;
+    margin-right: 50px;
 
 }
 
