@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		
 		<link rel="stylesheet" href="/assets/css/style.css" type="text/css"/>	
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 
         <!--SEO Features-->
@@ -21,6 +22,8 @@
                         <h1>pAwlert</h1>
                         <p>Awlerts To Bring Your Lost Paws Home!</p>
       				</header>
+
+
 		{{/unless}}
 
 
@@ -32,7 +35,9 @@
 				&#183;
 				<a href="/users/new">Sign Up</a>
 				</div>
-		</header>							
+		</header>	
+
+
 			{{/unless}}
 			{{#if logged_in}}
 			<header id="headerLogin">
@@ -56,10 +61,22 @@
 			        </div>
 			      </div>
 			    </div>
+			    </header>
+
+
 			{{/if}}
-	</header>
+	
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
 		{{{ body }}}
+
+		<div class="footer text-center center-block">
+      			
+                <a href="#"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+	            <a href="#"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+	            <a href="#"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+	            <a href="mailto:"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+		</div>
+		  
 	</body>
 </HTML>
