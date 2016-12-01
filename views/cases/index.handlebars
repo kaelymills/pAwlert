@@ -5,37 +5,10 @@
 
           <h1 >{{crime.name}}</h1>
           <p id = "article">{{crime.article}}</p>
-        
-        <h2>Additional Links</h2>
-        <p>Contact: {{crime.phone}}</p>
-        <p>Link: <a href="{{crime.cslink}}" class ="cslink"></a> </p> 
         <p>Help Find This Paw!</p> 
-        {{#unless favorite}}
-        <form class="create-update-form" action="/favorite" method="POST">
-          <input type="hidden" name="favorite" value="{{crime.name}}" >
-          <input type="hidden" name="favoriteid" value="{{crime.id}}" >
-          <button class="btn btn-default" type="submit">Favorite</button>
-        </form>
-        {{/unless}}
         
-        {{#if favorite}}  
-        <h2>Notes</h2>
-        <ul>
-          {{#each note}}
-              <li>
-                {{this.name}} - {{this.User.username}}
-              </li>
-          {{/each}}
-        </ul>      
-          <form class="create-update-form" action="/addnote" method="POST">
-          <div class="form-group comments">
-            <input type="hidden" name="cid" value="{{crime.id}}" >           
-            <label for="note">Add a note:</label>
-            <input type="text" id="note" name="name">           
-            <button type="submit">Comment</button>
-          </div>
-        </form>   
-        {{/if}}    
+        
+       
         </div>
           
       </div>
