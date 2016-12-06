@@ -17,7 +17,7 @@ alert("submitting form");
         // Submit the form using AJAX.
         $.ajax({
             type: 'POST',
-            url: 'http://localhost:3000/' + $(form).attr('action'),
+            url: 'http://localhost:3000/readmore/mailer.php' + $(form).attr('action'),
             data: formData
         })
 
