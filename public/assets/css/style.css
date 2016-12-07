@@ -109,6 +109,16 @@ img {
 	margin: 10px auto;
 }
 
+.subheading {
+    display: block;
+    background-color:rgba(192,192,192,0.7);
+    width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
 #thumbimg {
     height: 170px; 
     width: auto;
