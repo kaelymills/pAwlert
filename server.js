@@ -7,7 +7,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser'); // for working with cookies
 var bodyParser = require('body-parser');
 var session = require('express-session'); 
-var methodOverride = require('method-override'); // for deletes in express
+var methodOverride = require('method-override');
+var nodemailer = require("nodemailer");// for deletes in express
 
 
 // Our model controllers (rather than routes)
@@ -56,6 +57,63 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', application_controller);
 app.use('/users', users_controller);
 
+app.post('/sendMail', function (req, res, next) {
+    var sg = require('sendgrid')('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');
+    var request = sg.emptyRequest({
+        method: 'POST',
+        path: '/v3/mail/send',
+        body: {
+            personalizations: [
+                {
+                    to: [
+                        {
+                            email: 'kaelymills@gmail.com',
+                        },
+                    ],
+                    subject: 'Hello World from the SendGrid Node.js Library!',
+                },
+            ],
+            from: {
+                email: req.body.email,
+            },
+            content: [
+                {
+                    type: 'text/plain',
+                    value: req.body.message,
+                },
+            ],
+        },
+    });
+
+//With promise
+    sg.API(request)
+        .then(response => {
+        console.log(response.statusCode);
+    console.log(response.body);
+    console.log(response.headers);
+})
+    .catch(error => {
+        //error is an instance of SendGridError
+        //The full response is attached to error.response
+        console.log(error.response.statusCode);
+});
+
+//With callback
+    sg.API(request, function(error, response) {
+        if (error) {
+            console.log('Error response received');
+        }
+        console.log(response.statusCode);
+        console.log(response.body);
+        console.log(response.headers);
+    });
+
+    console.log(req);
+    res.end();
+
+})
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -64,7 +122,12 @@ app.use(function(req, res, next) {
 });
 
 
+
 var PORT = process.env.PORT || 3000;
 console.log("listening" + PORT);
+
+app.get('/',function(req,res){
+    res.sendfile('index.html');
+});
 
 app.listen(PORT);
