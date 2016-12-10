@@ -70,7 +70,7 @@ app.post('/sendMail', function (req, res, next) {
                             email: 'kaelymills@gmail.com',
                         },
                     ],
-                    subject: 'Hello World from the SendGrid Node.js Library!',
+                    subject: 'You have been contacted about your lost Paw!',
                 },
             ],
             from: {
@@ -84,6 +84,7 @@ app.post('/sendMail', function (req, res, next) {
             ],
         },
     });
+    console.log("Your message sentt");
 
 //With promise
     sg.API(request)
