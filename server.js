@@ -86,6 +86,7 @@ app.post('/sendMail', function (req, res, next) {
     });
     console.log("Your message sentt");
 
+
 //With promise
     sg.API(request)
         .then(response => {
@@ -110,6 +111,7 @@ app.post('/sendMail', function (req, res, next) {
     });
 
     console.log(req);
+    res.redirect("/");
     res.end();
 
 })
