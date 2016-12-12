@@ -58,7 +58,7 @@ app.use('/', application_controller);
 app.use('/users', users_controller);
 
 app.post('/sendMail', function (req, res, next) {
-    var sg = require('sendgrid')('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');
+    var sg = require('sendgrid')('');
     var request = sg.emptyRequest({
         method: 'POST',
         path: '/v3/mail/send',
