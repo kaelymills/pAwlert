@@ -40,6 +40,10 @@ router.get('/crimeapi', function (req, res) {
   res.render('api/index');
 });
 
+router.get('/pawpost', function(req,res) {
+  res.render('postPaw/pawpost');
+});
+
 router.post('/addnote', function (req, res) {
   models.Note.create({
     name: req.body.name,
