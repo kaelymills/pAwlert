@@ -1,3 +1,7 @@
+
+    <div id="ww">
+
+
 <div class="container">
 
     <form class="create-update-form" action="/api/new" method="POST">
@@ -8,25 +12,19 @@
         <h4>Link to Photo Image (Required)</h4>
         <input type="text" name="link" id="photo" class="form-control" required >
 
-        <h4>Date (mm/dd/yy)</h4>
+        <h4>Missing Since (mm/dd/yy)</h4>
         <input type="text" name="date" id="date" class="form-control" required >
 
-        <h4>Short Description:</h4>
-        <input type="text" name="case" id="case" class="form-control" required >
-
-        <h4>Article:</h4>
+        <h4>Description:</h4>
         <input type="text" name="article" id="article" class="form-control article" required >
 
-        <h4>Latitude:</h4>
+        <h4>Last Seen:</h4>
         <input type="text" name="lat" id="link" class="form-control" required >
-
-        <h4>Longitude:</h4>
-        <input type="text" name="long" id="link" class="form-control" required >
 
         <h4>Phone Number:</h4>
         <input type="text" name="phone" id="phone" class="form-control" required >
 
-        <h4>Link:</h4>
+        <h4>Email Address:</h4>
         <input type="text" name="cslink" id="link" class="form-control" required >
         <hr>
 
@@ -36,6 +34,7 @@
             Submit</button>
     </form>
 </div>
+        </div>
 <script type="text/javascript">
     $('#add').on('click', function () {
         var newcrime = {
@@ -59,3 +58,4 @@
 
     });
 </script>
+
