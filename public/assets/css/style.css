@@ -81,11 +81,13 @@ html {
 }
 
 .signLogin {
-    font-size: 25px;
+    font-size: 15px;
     padding: 10px;
 }
 
-
+.signupL {
+    font-size: 25px;
+}
 
 .logo {
     height: 30%;
