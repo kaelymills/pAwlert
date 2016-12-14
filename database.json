@@ -2,29 +2,32 @@
     "data": [
         {
             "name": "Lila",
-            "link": "http://ghk.h-cdn.co/assets/16/09/980x490/landscape-1457107485-gettyimages-512366437.jpg",
+            "photo": "http://ghk.h-cdn.co/assets/16/09/980x490/landscape-1457107485-gettyimages-512366437.jpg",
             "date": "02/09/2016",
             "case": "Yellow lab puppy found off of route 41.",
             "article": "",
-            "lat": "44.1644",
-            "long": "71.4326",
             "phone": "(603) 223-8813",
             "cslink": "",
             "id": 1
         },
-
         {
             "name": "Cooper",
-            "link": "https://s-media-cache-ak0.pinimg.com/736x/45/a4/e1/45a4e1a9dcddbd936c5586419842e397.jpg",
+            "photo": "https://s-media-cache-ak0.pinimg.com/736x/45/a4/e1/45a4e1a9dcddbd936c5586419842e397.jpg",
             "date": "02/09/2016",
             "case": "Black lab puppy found off of route 41.",
             "article": "",
-            "lat": "44.1644",
-            "long": "71.4326",
             "phone": "(603) 223-8813",
             "cslink": "",
             "id": 1
+        },
+        {
+            "name": "rusty",
+            "photo": "http://cdn1-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-2.jpg",
+            "date": "2016-08-01",
+            "case": "testing the descitp",
+            "phone": "3211235079",
+            "email": "rusty@gmail.com",
+            "id": 3
         }
-
     ]
 }

@@ -80,6 +80,10 @@ html {
     transform: translateY(-50%);    
 }
 
+.postform {
+    width: 40%;
+}
+
 .signLogin {
     font-size: 15px;
     padding: 10px;

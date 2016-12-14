@@ -44,16 +44,16 @@ router.get('/pawpost', function(req,res) {
   res.render('postPaw/pawpost');
 });
 
-router.post('/addnote', function (req, res) {
-  models.Note.create({
-    name: req.body.name,
-    crime_id: req.body.cid,
-    user_id: req.session.user_id
-  })
-  .then(function() {
-    res.redirect('back');
-  })
-});
+// router.post('/addnote', function (req, res) {
+//   models.Note.create({
+//     name: req.body.name,
+//     crime_id: req.body.cid,
+//     user_id: req.session.user_id
+//   })
+//   .then(function() {
+//     res.redirect('back');
+//   })
+// });
 
 router.get('/readmore/:name', function (req, res) {
   var name = req.params.name;
@@ -93,15 +93,15 @@ router.get('/readmore/:name', function (req, res) {
 })
 });
 
-router.post('/favorite', function(req,res) {
-  models.Fave.create({
-    fave_name: req.body.favorite,
-    crime_id: req.body.favoriteid,
-    user_id: req.session.user_id
-    }).then(function() {
-      res.redirect('back');
-});
-});
+// router.post('/favorite', function(req,res) {
+//   models.Fave.create({
+//     fave_name: req.body.favorite,
+//     crime_id: req.body.favoriteid,
+//     user_id: req.session.user_id
+//     }).then(function() {
+//       res.redirect('back');
+// });
+// });
 
 router.get('/profile', function (req, res) {
 var user_id = req.session.user_id;  
