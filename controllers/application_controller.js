@@ -22,6 +22,7 @@ router.post('/api/new', function (req, res) {
   if(!req.body) return res.end();
           var dataFile = "database.json";
       var newcrime = req.body;
+      console.log('newcrime::', newcrime);
       var crimeData = JSON.parse(fs.readFileSync(dataFile, 'utf8'));  
       
       newcrime.id = crimeData.data.length+1;
@@ -35,6 +36,7 @@ router.post('/api/new', function (req, res) {
       });
       res.redirect("/");
       res.json(newcrime);
+
 
 });
 
