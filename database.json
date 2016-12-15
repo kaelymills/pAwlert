@@ -5,7 +5,6 @@
             "photo": "http://ghk.h-cdn.co/assets/16/09/980x490/landscape-1457107485-gettyimages-512366437.jpg",
             "date": "02/09/2016",
             "case": "Yellow lab puppy found off of route 41.",
-            "article": "",
             "phone": "(603) 223-8813",
             "cslink": "",
             "id": 1
@@ -15,7 +14,6 @@
             "photo": "https://s-media-cache-ak0.pinimg.com/736x/45/a4/e1/45a4e1a9dcddbd936c5586419842e397.jpg",
             "date": "02/09/2016",
             "case": "Black lab puppy found off of route 41.",
-            "article": "",
             "phone": "(603) 223-8813",
             "cslink": "",
             "id": 1
@@ -24,7 +22,7 @@
             "name": "cooper",
             "photo": "http://cdn1-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-2.jpg",
             "date": "0044-04-04",
-            "article": "final test",
+            "case": "final test",
             "phone": "498439083940",
             "email": "test@gmail.com",
             "id": 3
