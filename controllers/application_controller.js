@@ -33,7 +33,9 @@ router.post('/api/new', function (req, res) {
           return console.log(err);
         }
       });
+      res.redirect("/");
       res.json(newcrime);
+
 });
 
 router.get('/crimeapi', function (req, res) {

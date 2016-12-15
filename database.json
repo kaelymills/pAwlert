@@ -28,15 +28,6 @@
             "phone": "3211235079",
             "email": "rusty@gmail.com",
             "id": 3
-        },
-        {
-            "name": "doggies",
-            "photo": "http://cdn1-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-2.jpg",
-            "date": "9888-08-01",
-            "case": "testerrrr",
-            "phone": "32323244",
-            "email": "@gmail.com",
-            "id": 4
         }
     ]
 }

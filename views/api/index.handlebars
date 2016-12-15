@@ -1,46 +1,50 @@
 	<div class="container">
 
-  		<form class="create-update-form" action="/api/new" method="POST">
-		<h3><strong>Enter a Lost Paw</strong></h3>
+  		<form class="create-update-form " action="/api/new" method="POST">
+        <h1 class="text-center"><strong>Enter a Lost Paw</strong></h1>
+        <h4>Pet Name</h4>
+        <input type="text" name="name" id="name" class="form-control"  >
 
-		<h4>Name</h4>
-		<input type="text" name="name" id="name" class="form-control" required >
+        <h4>Link to Photo Image</h4>
+        <input type="text" name="photo" id="photo" class="form-control"  >
 
-		<h4>Link to Photo Image</h4>
-		<input type="text" name="link" id="photo" class="form-control" required >
+        <h4>Missing Since (mm/dd/yy)</h4>
+        <input type="date" name="date" id="date" class="form-control" >
 
-		<h4>Date (mm/dd/yy)</h4>
-		<input type="text" name="date" id="date" class="form-control" required >
+        <h4>Description:</h4>
+        <input type="text" name="article" id="case" class="form-control article" >
 
-		<h4>Email:</h4>
-		<input type="text" name="email" id="email" class="form-control" required >
+        <h4>Phone Number:</h4>
+        <input type="text" name="phone" id="phone" class="form-control" >
 
-		<h4>Short Description:</h4>
-		<input type="text" name="case" id="case" class="form-control" required >		
+        <h4>Email Address:</h4>
+        <input type="email" name="email" id="email" class="form-control" >
+        <hr>
+
+        <br>
+        <br>
+        <button type="submit" class="btn btn-default btn-lg" id="add"><span class="glyphicon glyphicon-check"></span>
+            Submit</button>
+    </form>
+</div>
+</div>      
+<script type="text/javascript">
+    $('#add').on('click', function () {
+        var newcrime = {
+
+            name: $('#name').val().trim(),
+            photo: $('#photo').val().trim(),
+            date: $('#date').val().trim(),
+            case: $('#case').val().trim(),
+            phone: $('#phone').val().trim(),
+            email: $('#email').val().trim(),
+        };
+        $('input:text').val('');
+        $.post('http://localhost:3000/api/new', newcrime)
+                .done(function (data) {
+                    console.log(data);
+                });
 
 
-		<br>
-		<br>
-		<button type="submit" class="btn btn-default btn-lg btn-block" id="add"><span class="glyphicon glyphicon-check"></span>
- 		Submit</button>
-  		</form>
-	</div>
-		<script type="text/javascript">
-		$('#add').on('click', function () {
-			var newcrime = {
-
-				name: $('#name').val().trim(),
-				photo: $('#photo').val().trim(),
-				date: $('#date').val().trim(),
-				case: $('#case').val().trim(),
-				email: $('#email').val().trim(),
-			 };
-			 $('input:text').val('');
-			$.post('http://localhost:3000/api/new', newcrime)
-				.done(function (data) {
-					console.log(data);
-				});
-
-			
-		});
-	</script>
+    });
+</script>
